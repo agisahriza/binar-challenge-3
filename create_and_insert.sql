@@ -35,6 +35,10 @@ CREATE TABLE transactions (
     updatedAt TIMESTAMP DEFAULT NOW()
 );
 
+CREATE INDEX index_customers ON "customers" (id);
+CREATE INDEX index_account ON "accounts" (id);
+CREATE INDEX index_transaction ON "transactions" (id);
+
 INSERT INTO customers (name, address, phone_number) VALUES
 ('Agi Sahriza', 'Banjarmasin', '085849314100'),
 ('Daan Nor', 'Handil Bakti', '081234567'),
